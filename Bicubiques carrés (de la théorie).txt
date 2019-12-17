@@ -1,0 +1,119 @@
+
+Rappel : (9,8) => 217. Alors...
+(17,208) => 47089
+
+(17,-8) ==> 225 et -208
+(-8,17) ==> -225 et 17
+(17,-9) ==> 208 et -225
+(-9,17) ==> -208 et -17
+(9,8) ==> 17 et 208
+(8,9) ==> -17 et 225
+
+
+
+
+------
+Nombre bicubique carré du multiple d'un nombre n donné :
+Cas n impair : 
+
+
+Equivalent triangulaire d'un nombre impair à la puissance 4 :
+Pour n impair : E(n) 3(n^4-1)/4+1
+(3*n*E(n)) ^2 est bicubique
+Exemples :
+(nombre) : (nombre^4) => E(n) => bicubique carré
+3 : 81 => 61 => 301401
+5 : 625 => 469 => 7035^2
+7 : 2401 => 1801 => 37821^2
+9 : 6561 => 4921 => 132867^2
+11 : 14641 => 10981 => 362373^2
+13 : 28561 => 21421 => 835419^2
+...
+Exemple "fabriqué" : 
+"Je veux un nombre bicubique qui soit le carré d'un multiple de 23"
+265^2-264^2=23^2
+(265,264) : 209881 
+
+Démo : 
+A partir de n impair, on cherche ici un nombre a(n) tel que (a+1)^2-a^2 = n^2
+(n^2-1)/2 remplit ce critère.
+Ainsi, l'un des coefficients bicubiques associés à CBC(a(n)+1,a(n))^2 (le b2-a2 du CBC(b,a)) est (a(n)+1)^2-a(n)^2 = n^2.
+Et de ce fait, 9*n^2*CBC(a(n)+1,a(n)) = (3*n*CBC(a(n)+1,a(n))) est bicubique.
+Ses clés positives se déduisent de celles de CBC(a(n)+1,a(n))^2 et sont : (a(n)*(3a(n)+2)-n^2, a(n)*(3a(n)+2)+2n^2).
+Avec a(n)*(3a(n)+2) = (n2-1)/2*(3n2-3+4)/2 = (n2-1)(3n2+1)/4
+Les clés positives sont donc : 
+(n2-1)(3n2+1)/4-n2 et (n2-1)(3n2+1)/4+2n2
+
+Application : nombre bicubique carré d'un multiple de 11 (de 33 en pratique) :
+120*364/4 = 10920 ;
+3*11*CBC(61,60) = 362373
+On a 11162^3-10799^3 = 362373^2
+
+-----
+Cas n pair : il faut trouver a et b premiers entre eux tels que (a2-b2), b(b+2a) ou a(a+2b) soit le carré d'un multiple de n.
+
+Si n est multiple de 3 alors puisque notre recherche donne le carré d'un multiple de 3 autant chercher directement le carré d'un multiple de 9. On suppose que c'est ensuite le cas.
+
+Recherche sur a2-b2 : 
+a2 et b2 sont forcément impairs (puisque premiers entre eux et leur différence doit être paire) et donc = 1 [8] (car carrés).Donc a2-b2 est multiple de 8, donc si n = 2*(2k+1), alors a2-b2 est nécéssairement un multiple de 2n. Ainsi, on peut rechercher directement les carrés des multiples de 4.
+Si n est multiple de 4, il suffit de trouver a et b tels que a2-b2 soit multiple de n2 ; cela est toujours possible grâce à une recherche pythagoricienne. 
+Il est même possible de trouver a et b en imposant que a2-b2 ne soit pas multiple de (2n)2.
+
+"Je veux le carré d'un multiple de 4" :
+a=5,b=3 donnent : a2-b2 = 16 ; b(b+2a)=39
+(C(5,3)*4*3)^2 = 588^2 = (39+32)^3 - (39-16)^3
+
+"Je veux le carré d'un multiple de 36" (donc un coefficient b2-a2 multiple de 12^2=144) : 
+a=13 et b=5 donnent : a2-b2 = 144, b(b+2a)=155.
+(C(13,5)*12*3)^2 = 9324^2 = (155+288)^3-(155-144)^3
+
+/*fail, je suis d'abord parti sur a=85 et b=77 donnent : a2-b2=144 et b(b+2a)=19019 ; 
+(C(85,77)*36*3)^2 = 2127492^2 = (19019+2592)^3-(19019-1296)^3"*/
+
+"Je veux le carré d'un multiple de 28" :
+a=53 et b=45 donnent : a2-b2=784 et b(b+2a)=6795
+(C(53,45)*28*3)^2= 606396^2 = (6795+1568)^3-(6795-784)^3
+
+"Je veux le carré d'un multiple de 8" : 
+a=17 et b= -15
+a2-b2 = 64
+b(b+2a)= -285 
+C(64,-285)=C(64,221)= 17*8*2
+
+"Je veux le carré d'un multiple de 16" :
+a=65 et b=63
+a2-b2 = 256...
+
+Recherche sur b(b+2a) : b est obligatoirement pair, puisque b(b+2a) est de la parité de b. 
+Puisque a et b sont premiers entre eux, alors nécessairement a est impair. 
+Si b = 0 [4], alors (b+2a) = 2 [4] et de ce fait b est multiple de 8 (en effet si on avait b = 4[8] (donc b=4[16] ou b=12[16]), on aurait b(b+2a) = 8 [16] et on n'aurait donc pas de carré possible.
+Si b = 2 [4], alors (b+2a) est multiple de 8, par un raisonnemnt similaire.
+Dans les 2 cas, b(b+2a) est multiple de 16. Ainsi on peut également rechercher directement les carrés des multiples de 4.
+
+Si n est multiple de 9 (donc de 18) et donc si b(b+2a) multiple de 3 (donc de 9 puisque carré), alors :
+b est multiple de 9 OU (b+2a) est multiple de 9. 
+Dans le cas b+2a multiple de 9, il faut obligatoirement qu'on ait a=b[3]. Cela serait impossible puisqu'on aurait automatiquement a2=b2=1[3] et donc a2-b2 multiple de 3, non premier avec b(b+2a).
+Le cas b multiple de 9 n'est en revanche pas à exclure.
+
+"Je veux le carré d'un multiple de 36" :
+b=18, a= -5
+b(b+2a)=144
+a2-b2= -299
+==> On se ramène au cas "b=13,a=5" où l'on a b2-a2=144.
+C(144,155)=259^2 (assez curieusement, on a également C(221,64)=259^2. 
+
+b=18
+a=55
+b(b+2a)=2304
+
+
+---------
+Nombres "chanceux" c tels que n soit recherché et (3*n*c)^2 soit bicubiques :
+n impair :
+n pair, recherche sur a2-b2
+n pair, recherche sur a(a+2b) ou b(b+2a)
+
+---------
+
+205716^2=120001*352656=42 319 702 656
+=3529^3-1177^3

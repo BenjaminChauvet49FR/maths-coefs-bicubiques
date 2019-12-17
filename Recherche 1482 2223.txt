@@ -1,0 +1,11 @@
+(à la recherche d'un nombre bcb sous la forme 2223*n^3 ou 1482^2*n^3)
+
+542659 = 
+
+453 397 (DONC 17576*1729 est bcb)
+277 558
+
+1694173 = 
+555 231 185 693
+324 1109 (DONC 5000211*988 est bcb)
+508 971

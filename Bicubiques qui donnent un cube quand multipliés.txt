@@ -1,0 +1,15 @@
+Le produit de deux nombres "bicubiques" primaires (ie dont les clés sont premiers entre elles) donne-il un cube ?
+
+On cherche les couples (a,b) et (c,d) tels que (a^3+b^3)*(c^3+d^3) soit un cube avec comme contrainte que 
+pgcd(a,b)=pgcd(c,d)=1.
+
+14 : 28 (3,1), 98 (5,3)
+21 : 7 (2,1), 1323 (11,2)
+39 : 351 (7,2), 169 (8,7)
+455 : 3185 (17,12), 29575 (31,6)
+910 : 31850 (27,23), 23660 (29,9)
+1001 : 539 (8,3), 1860859 (123,2)
+1638 : 63882 (43,25), 68796 (41,5)
+1729 : 157339 (54,5), 32851 (43,36)
+3689 : 5831 (18,1), 8609599 (199,90)
+3990 : 251370 (73,43), 252700 (47,53)

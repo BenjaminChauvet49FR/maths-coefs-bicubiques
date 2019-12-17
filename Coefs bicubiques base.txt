@@ -1,0 +1,15 @@
+Coefficients C, a et b tels que (a^3-b^3)/(a-b) = C. On a de même a²+ab+b² = (a+b)²-(a+b)a+a² = (a+b)²-(a+b)b+b² = C
+7 : 2 1 / 21 : 4 3
+13 : 3 1 / 39 : 5 2
+19 : 3 2 / 57 : 7 1  (Rappel : 2^3+5^3 = 133, 3^3+5^3 = 152, 5 = 2+3)
+31 : 5 4 / 93 7 4
+37 4 3 / 111 10 1
+43 6 1 / 129 8 5
+49 5 3 / 147 11 2
+571 21 5
+
+817 16 17
+
+(Rappel pour trouver deux nombres a et b tels que a^2+b^2+ab = C : chercher a et b tels que a²+b(b+a) = C. Exemple, C = 439. a = 18 et (a+b) = 23. On obtient a ou b (au choix) puis a+b. Du coup a = 18, b = 5)
+
+

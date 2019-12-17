@@ -1,0 +1,31 @@
+(a+ib)2 + (a+ib)(c+id) + (c+id) 2 =
+
+(a2-b2)+(c2-d2)+(ac-bd) + (2ab+2cd+bc+ad)i
+=C(a,c)-C(b,d)+ b(2a+c)+d(2c+a)i
+
+Il faut trouver tels que b(2a+c) = -d(2c+a) <=>
+b = -5 (exemple pris au pif)
+2a+c = 8
+-d = -10
+2c+a = 4
+a = 2 ; c = 0
+b = -5 ; d = 10.
+
+2-5i ; 10i
+
+C(2,0)-C(-5,10)=4-75= -71
+
+
+Exemple au pif, bis : 
+a = 6 c = 1
+b = 8 d = -13
+6+8i ; 1-13i
+43 - 129 = -86 (Tiens, le rapport des 2 coefs bicubiques est entier)
+
+
+
+Prendre : 
+a et c quelconques
+b = 2c+a ; 
+d = -(2a+c)
+De sorte à avoir a+ib 1er avec c+id.

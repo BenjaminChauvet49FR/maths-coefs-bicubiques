@@ -1,0 +1,37 @@
+X1 (a1,b1) <=> a1^2+a1b1+b1^2 = X1
+X2 (a2,b2)
+...
+Xi (ai,bi)
+On note Cd1d2...dn le produit d1d2...dn avec di=ai ou bi. 
+Ainsi, Caaba = a1a2b3a4.
+
+X1X2 (a2a1-b2b1,(a2+b2)b1+b2a1) | (b2a1-a2b1,(a2+b2)b1+a2a1)   = (Caa-Cbb,Cba+Cbb+Cab) | (Cab-Cba,Cbb+Cba+Caa)
+
+X1X2X3 (a3(Caa-Cbb)-b3(Cba+Cab+Cbb), (a3+b3)(Cba+Cab+Cbb)+b3(Caa-Cbb)) | (b3(Caa-Cbb)-a3(Cba+Cab+Cbb) , (a3+b3)(Cba+Cbb+Cab)+a3(Caa-Cbb) ) | 
+(a3(Cab-Cba)-b3(Cbb+Cba+Caa)),(a3+b3)(Cbb+Cba+Caa)+b3(Cab-Cba)) | (b3(Cab-Cba)-a3(Cbb+Cba+Caa)),(a3+b3)(Cbb+Cba+Caa)+a3(Cab-Cba)
+
+=
+(Caaa-Cbba-Cbab-Cabb-Cbbb),(Cbaa+Caba+Cbba+Cbab+Cabb+Caab) | (Caab-Cbbb-Cbaa-Caba-Cbba),(Cbaa+Caba+Cbab+Cbbb+Cabb+Caaa) |
+(Caba-Cbaa-Cbbb-Caab-Cbab),(Cbba+Caaa+Cbaa+Cbbb+Caab+Cabb) | (Cabb-Cbab-Cbba-Caaa-Cbaa),(Cbba+Caaa+Cbbb+Cbab+Caab+Caba)
+
+X1X2X3X4
+a4(Caaa-Cbba-Cbab-Cabb-Cbbb)-b4(Cbaa+Caba+Cbba+Cbab+Cabb+Caab),(a4+b4)(Cbaa+Caba+Cbba+Cbab+Cabb+Caab)+b4(Caaa-Cbba-Cbab-Cabb-Cbbb)
+b4(Caaa-Cbba-Cbab-Cabb-Cbbb)-a4(Cbaa+Caba+Cbba+Cbab+Cabb+Caab),(a4+b4)(Cbaa+Caba+Cbba+Cbab+Cabb+Caab)+a4(Caaa-Cbba-Cbab-Cabb-Cbbb)
+ (*4)
+=
+Caaaa-Cbbaa-Cbaba-Cabba-Cbaab-Cabab-Caabb-Cbbba-Cbbab-Cbabb-Cabbb, Cbaaa+Cabaa+Caaba+Caaab+Cbbaa+Cbaba+Cabba+Cbaab+Cabab+Caabb-Cbbbb
+
+X1X2X3X4X5
+a5(Caaaa-Cbbaa-Cbaba-Cabba-Cbaab-Cabab-Caabb-Cbbba-Cbbab-Cbabb-Cabbb)-b5(Cbaaa+Cabaa+Caaba+Caaab+Cbbaa+Cbaba+Cabba+Cbaab+Cabab+Caabb-Cbbbb),
+(a5+b5)(Cbaaa+Cabaa+Caaba+Caaab+Cbbaa+Cbaba+Cabba+Cbaab+Cabab+Caabb-Cbbbb)+b5(Caaaa-Cbbaa-Cbaba-Cabba-Cbaab-Cabab-Caabb-Cbbba-Cbbab-Cbabb-Cabbb)
+
+ Caaaaa
+-Cbbaaa-Cbabaa-Cabbaa-Cbaaba-Cababa-Caabba-Cbaaab-Cabaab-Caabab-Caaabb
+-Cbbbaa-Cbbaba-Cbabba-Cabbba-Cbbaab-Cbabab-Cabbab-Cbaabb-Cababb-Caabbb
++Cbbbbb,
+
+ Cbaaaa+Cabaaa+Caabaa+Caaaba+Caaaab
++Cbbaaa+Cbabaa+Cabbaa+Cbaaba+Cababa+Caabba+Cbaaab+Cabaab+Caabab+Caaabb
+-Cbbbba-Cbbbab-Cbbabb-Cbabbb-Cabbbb
+-Cbbbbb
+

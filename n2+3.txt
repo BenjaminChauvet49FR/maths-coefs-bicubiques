@@ -1,0 +1,22 @@
+Pour tout entier n, n2+3 = CBC (n-1,2).
+La démonstration est triviale et s'appuie sur l'identité remarquable n2 = ((n-1)+1)^2.
+
+J'ai cependant remarqué cela grâce au coefficient 1488403 dont l'une des paires était (1219,2) et remarquai avec je ne sais plus quel nombre que cela se généralisait.
+
+Voici quelques CBC de la famille n2+3 :
+679
+1159
+3367
+6727
+12103
+15379
+1488403
+
+Multiples de 3 :
+1767
+5187
+
+Nombres premiers :
+7
+19
+67
